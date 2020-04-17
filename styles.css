@@ -1,5 +1,9 @@
 /*GLOBAL STYLES*/
 
+:root {
+  --active: rgb(99, 77, 144);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +32,8 @@ html {
 body {
   font-size: 1.6rem;
   padding: 0 32px;
+
+  min-height: 100vh;
 }
 
 ul {
@@ -35,8 +41,13 @@ ul {
 }
 
 a {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--active);
 }
 
 /*HEADER STYLES*/
@@ -174,31 +185,10 @@ header {
   text-align: center;
 }
 
-/* .menu ul li::after,
-.menu ul li::before {
-  content: '';
-  position: absolute;
-
-  left: 0;
-
-  width: 100%;
-  height: 1px;
-
-  background: black;
-}
-
-.menu ul li::after {
-  top: 0;
-}
-
-.menu ul li::before {
-  bottom: 0;
-} */
-
 /*NEWS STYLES*/
 
 main {
-  margin: 32px auto;
+  padding: 64px auto;
   max-width: 1028px;
 }
 
@@ -266,4 +256,117 @@ main {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 32px;
+}
+
+/*ABOUT PAGE STYLES*/
+
+.about-main {
+  display: flex;
+  
+  margin: auto;
+  padding: 64px 0;
+  min-height: calc(100vh - 64px);
+}
+
+.about-main > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+}
+
+.about-content {
+  margin-left: 64px;
+}
+
+.about-content ul {
+  position: relative;
+}
+
+.about-content h1 {
+  position: relative;
+
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+.links-group::after,
+.about-content h1::before {
+  content: "";
+  position: absolute;
+
+  height: 1px;
+  width: 100%;
+
+  left: 0;
+
+  background: black;
+}
+
+.about-content h1::before {
+  bottom: -24px;
+}
+
+.about-content p a:hover {
+  color: var(--active);
+}
+
+.about-content p {
+  margin: 48px 0;
+
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.about-content p a {
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.links-group::after {
+  top: -24px;
+}
+
+.links-group {
+  display: flex;
+  align-items: center;
+}
+
+.links-group li {
+  transition: transform 0.2s ease;
+}
+
+.links-group li:hover {
+  color: var(--active);
+  transform: scale(1.2);
+}
+
+.links-group li:active {
+  transform: scale(1);
+}
+
+.links-group li + li {
+  margin-left: 32px;
+}
+
+.links-group li svg {
+  height: 26px;
+  width: 26px;
+}
+
+@media (max-width: 1006px) {
+  .about-main > div {
+    flex-direction: column;
+    max-width: 563px;
+  }
+
+  .about-main img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .about-content {
+    margin: 32px 0 0 0;
+  }
 }
