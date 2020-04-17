@@ -260,6 +260,11 @@ main {
 
 /*ABOUT PAGE STYLES*/
 
+.conteiner {
+  padding: 64px 0;
+  margin: auto;
+}
+
 .about-main {
   display: flex;
   
