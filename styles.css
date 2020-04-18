@@ -57,7 +57,7 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  height: 64px;
+  height: 80px;
 }
 
 .logo {
@@ -261,7 +261,7 @@ main {
 /*ABOUT PAGE STYLES*/
 
 .conteiner {
-  padding: 64px 0;
+  padding: 48px 0;
   margin: auto;
 }
 
@@ -269,7 +269,6 @@ main {
   display: flex;
   
   margin: auto;
-  padding: 64px 0;
   min-height: calc(100vh - 64px);
 }
 
