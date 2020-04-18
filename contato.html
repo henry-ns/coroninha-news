@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="preload"
+      as="style"
+    />
+    <link rel="preload" href="./styles.css" as="style" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Contato | Coroninha NEWS</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img class="logo" src="./assets/svg/logo.svg" alt="Logo" />
+      </a>
+      <input type="checkbox" id="chk" />
+      <div class="nav">
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="/">News</a>
+            </li>
+            <li>
+              <a href="/sobre.html">Sobre</a>
+            </li>
+            <li>
+              <a href="/contato.html">Contato</a>
+            </li>
+            <li>
+              <a href="/saiba-mais.html">Saiba Mais</a>
+            </li>
+          </ul>
+        </nav>
+        <label for="chk" class="toggle-menu">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <strong>Menu</strong>
+        </label>
+      </div>
+    </header>
+    <main class="conteiner contact-main">
+      <div class="contact-title">
+        <h1>Contato</h1>
+      </div>
+      <form name="contact" netlify>
+        <div class="input-conteiner">
+          <label for="ip-name">Nome</label>
+          <input type="text" name="name" id="ip-name" 
+          placeholder="Seu nome"/>
+        </div>
+
+        <div class="input-conteiner">
+          <label for="ip-email">E-mail</label>
+          <input type="email" name="email" id="ip-email" 
+          placeholder="Seu e-mail"/>
+        </div>
+
+        <div class="input-conteiner">
+          <label for="ip-subject">Assunto</label>
+          <input type="text" name="subject" id="ip-subject" 
+          placeholder="O que você deseja falar comigo"/>
+        </div>
+
+        <div class="input-conteiner">
+          <label for="ip-message">Messagem</label>
+          <textarea
+            name="message"
+            id="ip-message"
+            placeholder="Digite sua mensagem aqui"
+          ></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+  </body>
+</html>
