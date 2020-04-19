@@ -2,6 +2,9 @@
 
 :root {
   --active: rgb(99, 77, 144);
+  --text: #404043;
+  --secundary-text: #aaa;
+  --border: #ccc;
 }
 
 * {
@@ -16,18 +19,18 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: darkgray;
+  background: var(--secundary-text);
   transition: 0.2s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: black;
+  background: var(--text);
 }
 
 html {
   font: 62.5% "Montserrat", sans-serif;
   font-weight: 300;
-  color: black;
+  color: var(--text);
 }
 
 body {
@@ -42,7 +45,7 @@ ul {
 }
 
 a {
-  color: black;
+  color: var(--text);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -95,7 +98,7 @@ header {
   height: 1px;
   width: 100%;
 
-  background-color: black;
+  background-color: var(--text);
   transform: translateY(-5px);
   transition: transform 0.2s ease, opacity 0.4s ease;
 }
@@ -136,7 +139,7 @@ header {
   max-width: 240px;
   height: 100vh;
 
-  background: white;
+  background: #fff;
   transition: transform 0.4s ease-out;
 }
 
@@ -185,7 +188,7 @@ header {
 .menu ul li::after {
   content: "";
   position: absolute;
-  background: black;
+  background: var(--text);
 
   bottom: 0;
   left: 0;
@@ -203,7 +206,7 @@ header {
 }
 
 .menu ul li a:hover {
-  color: black;
+  color: var(--text);
 }
 
 /*NEWS STYLES*/
@@ -268,7 +271,7 @@ main {
 
   left: 0;
 
-  background: black;
+  background: var(--text);
 }
 
 .news h1::after {
@@ -293,7 +296,7 @@ main {
 .news h2 strong {
   font-size: 1.4rem;
   margin-right: 8px;
-  color: black;
+  color: var(--text);
 }
 
 /*ABOUT PAGE STYLES*/
@@ -302,14 +305,14 @@ main {
   padding: 48px 0;
   margin: auto;
 
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 80px);
 }
 
 .about-main {
   display: flex;
   
   margin: auto;
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 80px);
 }
 
 .about-main > div {
@@ -345,7 +348,7 @@ main {
 
   left: 0;
 
-  background: black;
+  background: var(--text);
 }
 
 .about-content h1::before {
@@ -442,7 +445,7 @@ main {
   bottom: -8px;
 
   transform: translateX(-50%);
-  background: black;
+  background: var(--text);
 }
 
 .contact-title h2 {
@@ -452,7 +455,7 @@ main {
   
   font-weight: 300;
   font-size: 1.6rem;
-  color: #333;
+  color: var(--text);
 }
 
 form {
@@ -487,6 +490,13 @@ form textarea,
 
   padding: 8px;
   font-size: 1.6rem;
+  border: 1px solid var(--border);
+  transition: border 0.4s ease-out;
+}
+
+form textarea:hover,
+.input-conteiner input:hover {
+  border: 1px solid var(--text);
 }
 
 form textarea {
@@ -507,12 +517,12 @@ form button {
   font-size: 1.6rem;
   cursor: pointer;
 
-  border: 1px solid darkgray;
+  border: 1px solid var(--border);
   transition: border 0.2s ease;
 }
 
 form button:hover {
-  border: 2px solid darkgray;
+  border: 1px solid var(--text);
 }
 
 /*KNOW MORE PAGE*/
@@ -526,7 +536,7 @@ form button:hover {
   text-align: center;
 
   margin: auto 0;
-  border: 1px solid #aaa;
+  border: 1px solid var(--border);
   transition: 0.4s ease;
 }
 
@@ -536,9 +546,73 @@ form button:hover {
 }
 
 .refs-group li:hover {
-  border-color: black;
+  border-color: var(--text);
 }
 
 .refs-group li a:hover {
-  color: black;
+  color: var(--text);
+}
+
+/*SUCESS STYLES*/
+
+.sucess-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: left;
+}
+
+.sucess-main h1 {
+  position: relative;
+  font-size: 2.4rem;
+}
+
+.sucess-main h1::before {
+  content: "";
+  position: absolute;
+
+  height: 2px;
+  width: 110%;
+
+  left: 0;
+  bottom: -16px;
+
+  background: var(--text);
+}
+
+
+.sucess-main div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sucess-main p {
+  font-size: 1.8rem;
+
+  padding: 32px 0;
+}
+
+.sucess-main p,
+.sucess-main a {
+  margin-right: auto;
+}
+
+.sucess-main a {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid var(--border);
+  transition: border 0.4s ease-out;
+  padding: 8px;
+  padding-right: 16px;
+}
+
+.sucess-main a img {
+  margin-right: 12px;
+}
+
+.sucess-main a:hover {
+  border: 1px solid var(--text);
 }
