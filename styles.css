@@ -77,10 +77,6 @@ header {
   z-index: 1;
 }
 
-.toggle-menu strong {
-  z-index: 1;
-}
-
 .toggle-menu div {
   position: relative;
   width: 24px;
@@ -127,6 +123,7 @@ header {
 .toggle-menu strong {
   font-weight: 300;
   user-select: none;
+  z-index: 1;
 }
 
 .menu {
@@ -461,7 +458,7 @@ main {
   }
 
   .about-content {
-    margin: 32px 0 0 0;
+    margin: 32px 0 0;
   }
 }
 
