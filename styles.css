@@ -47,10 +47,6 @@ a {
   transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--active);
-}
-
 /*HEADER STYLES*/
 
 header {
@@ -290,6 +286,14 @@ main {
   font-weight: 400;
   padding-bottom: 32px;
   margin-top: auto;
+
+  color: #444;
+}
+
+.news h2 strong {
+  font-size: 1.4rem;
+  margin-right: 8px;
+  color: black;
 }
 
 /*ABOUT PAGE STYLES*/
@@ -378,7 +382,6 @@ main {
 }
 
 .links-group li:hover {
-  color: var(--active);
   transform: scale(1.2);
 }
 
