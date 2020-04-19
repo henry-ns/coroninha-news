@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="Site de nnóticias sobre o COVID-19. Desafio do Hiring Coders usando apenas HTML e CSS."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="preload"
+      as="style"
+    />
+    <link rel="preload" href="./styles.css" as="style" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel='icon' href='./assets/favicon.ico' type='image/x-icon'/ >
+
+    <title>Contato | Coroninha NEWS</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img class="logo" src="./assets/svg/logo.svg" alt="Logo" />
+      </a>
+      <input type="checkbox" id="chk" />
+      <div class="nav">
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="/">News</a>
+            </li>
+            <li>
+              <a href="/sobre.html">Sobre</a>
+            </li>
+            <li class="selected">
+              <a href="/contato.html">Contato</a>
+            </li>
+            <li>
+              <a href="/saiba-mais.html">Saiba Mais</a>
+            </li>
+          </ul>
+        </nav>
+        <label for="chk" class="toggle-menu">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <strong>Menu</strong>
+        </label>
+      </div>
+    </header>
+    <main class="conteiner sucess-main">
+      <div>
+        <h1>Obrigado por entrar em contato!</h1>
+        <p>Sua messagem foi enviada.</p>
+        <a href="/">
+          <img src="./assets/svg/arrow-left.svg" alt="Seta para esquerda">
+          Voltar para Home
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
