@@ -186,6 +186,30 @@ header {
   text-align: center;
 }
 
+.menu ul li::after {
+  content: "";
+  position: absolute;
+  background: black;
+
+  bottom: 0;
+  left: 0;
+
+  height: 1px;
+  width: 100%;
+
+  transform: translateY(100%) translateZ(0);
+  transition: 0.2s ease-out;
+}
+
+.selected::after,
+.menu ul li:hover::after {
+  transform: translateY(0) translateZ(0) !important;
+}
+
+.menu ul li a:hover {
+  color: black;
+}
+
 /*NEWS STYLES*/
 
 main {
@@ -264,6 +288,8 @@ main {
 .conteiner {
   padding: 48px 0;
   margin: auto;
+
+  min-height: calc(100vh - 64px);
 }
 
 .about-main {
@@ -380,6 +406,7 @@ main {
 
 .contact-title {
   display: flex;
+  flex-direction: column;
   text-align: center;
 
   margin-bottom: 64px;
@@ -404,6 +431,16 @@ main {
 
   transform: translateX(-50%);
   background: black;
+}
+
+.contact-title h2 {
+  margin: auto;
+  margin-top: 20px;
+  max-width: 350px;
+  
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: #333;
 }
 
 form {
@@ -464,4 +501,32 @@ form button {
 
 form button:hover {
   border: 2px solid darkgray;
+}
+
+/*KNOW MORE PAGE*/
+.refs-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 64px;
+}
+
+.refs-group li {
+  text-align: center;
+
+  margin: auto 0;
+  border: 1px solid #aaa;
+  transition: 0.4s ease;
+}
+
+.refs-group li a {
+  display: block;
+  padding: 50px 0;
+}
+
+.refs-group li:hover {
+  border-color: black;
+}
+
+.refs-group li a:hover {
+  color: black;
 }
