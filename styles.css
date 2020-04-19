@@ -223,25 +223,33 @@ main {
   gap: 64px;
 }
 
+.news li {
+  display: flex;
+  flex-direction: column;
+}
+
 .news img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .news h1 {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-
   position: relative;
 
   font-size: 2.4rem;
-  margin: 32px 0;
   font-weight: 500;
+
+  padding: 32px 0;
+  margin-bottom: auto;
 }
 
 .external-link {
-  margin-left: auto;
   opacity: 0.5;
+  margin-left: 16px;
   transition: 0.2s ease;
 }
 
@@ -268,11 +276,11 @@ main {
 }
 
 .news h1::after {
-  top: -16px;
+  top: 16px;
 }
 
 .news h2::before {
-  bottom: -16px;
+  bottom: 16px;
 }
 
 .news h2 {
@@ -280,7 +288,8 @@ main {
 
   font-size: 1.2rem;
   font-weight: 400;
-  margin-bottom: 32px;
+  padding-bottom: 32px;
+  margin-top: auto;
 }
 
 /*ABOUT PAGE STYLES*/
