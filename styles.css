@@ -723,6 +723,10 @@ form button:hover {
   align-items: center;
 
   text-align: left;
+
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  animation: to-center 0.6s ease-out both;
 }
 
 .sucess-main h1 {
