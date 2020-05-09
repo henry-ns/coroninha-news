@@ -190,17 +190,6 @@ header {
   font-size: 1.8rem;
 
   text-align: center;
-}
-
-.menu ul li {
-  position: relative;
-  overflow: hidden;
-
-  padding: 8px;
-  margin: 32px auto;
-  font-size: 1.8rem;
-
-  text-align: center;
 
   opacity: 0;
   transform: translateX(30px) translateZ(0);
@@ -210,10 +199,6 @@ header {
 #chk:checked ~ .nav .menu ul li {
   transform: translateX(0) translateZ(0);
   opacity: 1;
-}
-
-#chk:checked ~ .nav .menu ul li:nth-of-type(2) {
-  transition-delay: 0.2s;
 }
 
 #chk:checked ~ .nav .menu ul li:nth-of-type(2) {
